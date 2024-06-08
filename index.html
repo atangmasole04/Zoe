@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Me Back</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="flower.css">
+</head>
+<body>
+    
+    <div class="container" id="container">
+        <h1>Dear Zanetti,</h1>
+        <p>I know things weren't perfect between us, but I've reflected and realized the changes I need to make. Here are the promises I'd like to make to you:</p>
+    
+        <ul class="promises">
+            <li>I will listen to you more and truly hear your thoughts and feelings.</li>
+            <li>I will prioritize our time together and make sure we have regular date nights.</li>
+            <li>I will support you in your goals and dreams, cheering you on every step of the way.</li>
+            <li>I will be more patient and understanding, especially during tough times.</li>
+            <li>I will communicate openly and honestly, ensuring we both feel secure and loved.</li>
+            <li>I will surprise you with little gestures to show how much I care.</li>
+            <li>I will work on my personal growth to be a better partner for you.</li>
+        </ul>
+        <p>You mean the world to me, and I'm committed to making our relationship stronger and happier. Please consider giving us another chance.</p>
+        
+        <h2>Terms and Conditions</h2>
+        <p>By agreeing to give our relationship another chance, we both commit to:</p>
+        <ul class="terms">
+            <li>Communicating openly and honestly.</li>
+            <li>Supporting each other in personal growth.</li>
+            <li>Making time for each other regularly.</li>
+            <li>Handling conflicts with patience and understanding.</li>
+            <li>Showing appreciation and love through small gestures.</li>
+        </ul>
+
+        
+        <form id="relationshipForm" action="https://formspree.io/f/xrgnnzgg" method="post" onsubmit="return validateForm()">
+            <p>Do you agree to these terms and conditions?</p>
+            <label>
+                <input type="radio" name="response" value="agree"> I agree
+            </label>
+            <label>
+                <input type="radio" name="response" value="disagree"> I disagree
+            </label>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p style="margin-top: 20px;" id="specialMessage">I got something for you!</p>
+        <a href="flower.html" target="_blank" class="file-button" id="fileButton">Open it here</a>
+        
+        <p>Love always,</p>
+        <p>Your Pookie Bear</p>
+       
+    </div>
+    
+    <script>
+        function validateForm() {
+            const form = document.getElementById('relationshipForm');
+            const response = form.response.value;
+            if (!response) {
+                alert('Please select an option.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
